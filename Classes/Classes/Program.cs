@@ -11,47 +11,18 @@ namespace Classes
     {
         static void Main(string[] args)
         {
-            //Person person = new Person();
+            Person person = new Person();
             Teacher[] teacher = new Teacher[5];
             teacher[0] = new Teacher();
-            teacher = teacher[0].RandomTeacher(5);
-            //for (int i = 0; i < teacher.Length; i++)
-            //{
-            //    teacher[i] = new Teacher();
-            //    teacher = teacher[i].RandomTeacher(5);
-            //}
-            
-
-            //teacher[0].name = "Teacher1Name";
-            //teacher[0].surname = "Teacher1Surname";
-            //teacher[0].email = "Teacher1Email";
-            //teacher[0].age = 56;
-            //teacher[0].gender = "Man";
-            //teacher[0].salary = 150000;
-            //teacher[0].specialty = "C#";
-
-            //    name = "Teacher1Name",
-            //    surname = "Teacher1Surname",
-            //    email = "Teacher1Email",
-            //    age = 56,
-            //    gender = "Man",
-            //    salary = 150000,
-            //    specialty = "C#"
-            //};
-            //Teacher teacher2 = new Teacher
-            //{
-            //    name = "Teacher2Name",
-            //    surname = "Teacher2Surname",
-            //    email = "Teacher2Email",
-            //    age = 60,
-            //    gender = "Woman",
-            //    salary = 170000,
-            //    specialty = "JavaScript"
-            //};
-            //Print(teacher1);
+            teacher = person.RandomTeacher(5);
+            Student[] student = new Student[5];
+            student[0] = new Student();
+            student = person.RandomStudent(5);
+            //Print
             for (int i = 0; i < teacher.Length; i++)
             {
                 Print(teacher[i]);
+                Print(student[i]);
             }
         }
         static void Print(Person person)
@@ -67,10 +38,10 @@ namespace Classes
             Console.WriteLine($"Gender: {person.gender}");
             Teacher t = person as Teacher;
             if (t != null)
+            {
                 Console.WriteLine($"Salary: {t.salary}");
                 Console.WriteLine($"Specialty: {t.specialty}");
-
-
+            }
         }
         
     }
