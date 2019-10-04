@@ -13,10 +13,10 @@ namespace Classes
         {
             Person person = new Person();
             Teacher[] teacher = new Teacher[5];
-            teacher[0] = new Teacher();
+            person = new Teacher();
             teacher = person.RandomTeacher(5);
             Student[] student = new Student[5];
-            student[0] = new Student();
+            person = new Student();
             student = person.RandomStudent(5);
             //Print
             for (int i = 0; i < teacher.Length; i++)

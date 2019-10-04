@@ -14,6 +14,7 @@ namespace Classes
         public string email { get; set; }
         public string gender { get; set; }
         public byte age { get; set; }
+
         public Teacher[] RandomTeacher(int count)
         {
             Random rnd = new Random();
@@ -54,6 +55,7 @@ namespace Classes
             }
             return teacher;
         }
+
         public Student[] RandomStudent(int count)
         {
             Random rnd = new Random();
@@ -75,7 +77,7 @@ namespace Classes
             {
                 byte genderIndex = (byte)rnd.Next(0, 2);
                 byte specialtyIndex = (byte)rnd.Next(0, 4);
-                byte age = (byte)rnd.Next(25, 70);
+                byte age = (byte)rnd.Next(16, 25);
                 int salary = rnd.Next(100000, 800000);
                 Thread.Sleep(30);
                 student[i] = new Student();
